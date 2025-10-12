@@ -1362,7 +1362,7 @@ function ColorPicker.new(Position, Size, Color)
             if Input.UserInputType.Name == 'MouseMovement' or Input.UserInputType.Name == 'Touch' then
                 self:UpdatePosition(Input, P);
             end
-        elseif Type == 'Ended' and Input.UserInputType.Name == 'MouseButton1' then
+        elseif Type == 'Ended' and (Input.UserInputType.Name == 'MouseButton1' or Input.UserInputType.Name == 'Touch') then
             self.Item = nil;
         end
 	end
